@@ -4,8 +4,8 @@
   HTML for Project Part 2 CS 1520
 -->
 
-<?php require_once(email.php) ?>
-
+<?php session_start(); ?>
+<?php require_once("email.php") ?>
 
 <!DOCTYPE html>
 <html>
@@ -39,8 +39,8 @@
         <section>
           <nav>
             <ul>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="contact.html">Contact Me</a></li>
+              <li><a href="about.php">About Me</a></li>
+              <li><a href="contact.php">Contact Me</a></li>
             </ul>
           </nav>
         </section>

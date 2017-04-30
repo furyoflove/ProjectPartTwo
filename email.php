@@ -99,6 +99,23 @@
 
       <?php
 
+      // store messages into microsoft access database
+      $connection_string =
+      'odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};' .
+      'Dbq=C:\\xampp\\htdocs\\ProjectPartTwo\\messages.accdb;';
+
+      // create database connection handler
+      $database_handler = new PDO($connection_string);
+      $database_handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      $sql =
+      "INSERT INTO emails ( ID, [Headers], [Receiver], [Subject], [Message] ) " .
+      "VALUES (" . $email_from . ", " . $headers . ", " . $email_to . ", " . $email_subject . ", " . $email_message .  " )";
+
+      // pass the SQL query
+      $database_handler->query($sql);
+
+
   }
 
 ?>
