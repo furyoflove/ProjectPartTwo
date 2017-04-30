@@ -8,6 +8,6 @@
 
   Save ProjectPartTwo folder into localhost
 
-  Then load ProjectPartOne or move to index.html
+  Then load ProjectPartTwo or move to index.html
 
   Emails will be stored locally to the copy of messages.accdb
